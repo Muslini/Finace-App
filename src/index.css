@@ -11,3 +11,151 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Expenses Component */
+
+.expenses {
+  padding: 1rem;
+  background-color: rgb(31, 31, 31);
+  margin: 2rem auto;
+  width: 50rem;
+  max-width: 95%;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* ExpenseItem Component */
+
+.expense-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border-radius: 12px;
+  background-color: #4b4b4b;
+}
+
+/* .expense-description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-end;
+  flex-flow: column-reverse;
+  justify-content: flex-start;
+  flex: 1;
+} */
+
+.expense-amount {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #40005d;
+  border: 1px solid white;
+  padding: 0.5rem;
+  border-radius: 12px;
+  
+}
+
+.expense-box h2 {
+  font-size: 1rem;
+  margin: 0 1rem;
+  color: white;
+}
+
+@media (min-width: 580px) {
+  /* .expense-item__description {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+  } */
+
+  .expense-box h2 {
+    font-size: 1.25rem;
+  }
+
+  .expense-amount {
+    font-size: 1.25rem;
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+/* ExpenseDate Component */
+
+.expense-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 1px solid white;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  background-color: #2a2a2a;
+}
+
+.expense-month {
+  font-size: 0.75rem;
+  color: white;
+  font-weight: bold;
+}
+
+.expense-year {
+  font-size: 0.6rem;
+  color: white;
+}
+
+.expense-day {
+  font-size: 1.25rem;
+  color: white;
+  font-weight: bold;
+}
+
+/* New component */
+
+.new-expense-box {
+  max-width: 50rem;
+  width: 95%;
+  background-color: #a892ee;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 2rem auto;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.new-expense-box button {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  background-color: #40005d;
+  color: white;
+  border-radius: 12px;
+  border: 1px solid white;
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+.new-expense-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem
+}
+
+.new-expense-box input {
+  width: 23rem;
+  max-width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid white;
+}
+
+.new-expense-box label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+
+.new-expense-action {
+  text-align: right;
+}

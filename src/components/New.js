@@ -33,7 +33,7 @@ function NewExpense(props) {
 
     const addedExpense = {
       title: inputs.title,
-      amount: inputs.amount,
+      amount: +inputs.amount,
       date: new Date(inputs.date)
     };
 

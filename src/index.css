@@ -159,3 +159,73 @@ code {
 .new-expense-action {
   text-align: right;
 }
+
+/* Chart and chartbar components */
+
+.chart-box {
+  background-color: #f8dfff;
+  border-radius: 12px;
+  height: 10rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.chart-bar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart-bar-inner {
+  height: 100%;
+  width: 0.6rem;
+  border: 1px solid #313131;
+  border-radius: 12px;
+  background-color: #c3b4f3;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.chart-bar-fill {
+  background-color: #4826b9;
+  width: 100%;
+  transition: all 0.3s ease-out;
+}
+
+.chart-bar-label {
+  font-weight: bold;
+  font-size: 0.5rem;
+  text-align: center;
+}
+
+/* Filter component */
+
+.expenses-filter {
+  color: blue;
+  padding: 0 1rem;
+}
+
+.expenses-filter__control {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.expenses-filter label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.expenses-filter select {
+  font: inherit;
+  padding: 0.5rem 3rem;
+  font-weight: bold;
+  border-radius: 6px;
+}

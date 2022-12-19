@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ExpenseItem from "./ExpenseItem";
 import Filter from "./Filter";
+import Chart from "./chart/Chart";
 
 function Expenses(props) {
   const [selectedYear, setYear] = useState("All");
@@ -31,6 +32,7 @@ function Expenses(props) {
   return (
     <div className="expenses">
       <Filter defaultYear={selectedYear} onSend={handleOnSend} />
+      <Chart neededYear={ex}/>
       {selectedYear === "All" ? expenses.map(mapThrough) : ex.map(mapThrough)}
     </div>
   );

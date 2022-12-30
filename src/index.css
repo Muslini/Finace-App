@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #4b4b4b;
 }
 
 code {
@@ -22,6 +23,13 @@ code {
   max-width: 95%;
   border-radius: 12px;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.expenses > p {
+  font-size: 1.25rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
 }
 
 /* ExpenseItem Component */
@@ -62,7 +70,7 @@ code {
 .expense-box h2 {
   font-size: 1rem;
   margin: 0 1rem;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 @media (min-width: 580px) {
@@ -131,7 +139,7 @@ code {
   background-color: #40005d;
   color: white;
   border-radius: 12px;
-  border: 1px solid white;
+  border: 1px solid #40005d;
   margin-right: 1rem;
   margin-top: 1rem;
 }
@@ -221,6 +229,8 @@ code {
 .expenses-filter label {
   font-weight: bold;
   margin-bottom: 0.5rem;
+  color: white;
+  font-size: 1.2rem;
 }
 
 .expenses-filter select {

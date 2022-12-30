@@ -14,6 +14,7 @@ function Expenses(props) {
   const ex = expenses.filter(equality);
 
 
+
   function handleOnSend(year) {
     setYear(year);
   }
@@ -28,12 +29,13 @@ function Expenses(props) {
     );
   }
 
-  
+    
   return (
     <div className="expenses">
       <Filter defaultYear={selectedYear} onSend={handleOnSend} />
       <Chart neededYear={ex}/>
-      {selectedYear === "All" ? expenses.map(mapThrough) : ex.map(mapThrough)}
+      {selectedYear === "All" ? expenses.map(mapThrough) : (ex.length < 1 ? <p>No expenses for this year.</p> : ex.map(mapThrough))}
+      { }
     </div>
   );
 }

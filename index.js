@@ -8,7 +8,7 @@ const app = express();
 app.use(express.static(path.resolve(__dirname, "./FinancesApp/build")));
 const URL = process.env.CONNECT;
 
-app.get("/", function(req, res) {
+app.get("*", function(req, res) {
     res.sendFile(path.resolve(__dirname, "./FinancesApp/build/index.html"))
 });
 

@@ -53,15 +53,15 @@ function NewExpense(props) {
         <div className="new-expense-form">
           <div>
             <label>Title</label>
-            <input onChange={titleHandler} value={inputs.title} type="text"></input>
+            <input onChange={titleHandler} value={inputs.title} type="text" required></input>
           </div>
           <div>
             <label>Amount</label>
-            <input onChange={amountHandler} value={inputs.amount} type="number" min="0.1" step="0.1"></input>
+            <input onChange={amountHandler} value={inputs.amount} type="number" min="0.1" step="0.1" required></input>
           </div>
           <div>
             <label>Date</label>
-            <input onChange={dateHandler} value={inputs.date} type="date" min="2019-01-01" max="2022-12-31"></input>
+            <input onChange={dateHandler} value={inputs.date} type="date" min="2019-01-01" max="2022-12-31" required></input>
           </div>
         </div>
         <div className="new-expense-action">

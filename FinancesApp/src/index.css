@@ -5,7 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #4b4b4b;
+   background-image:     linear-gradient( rgba(40,24,78,.7), rgba(40,24,78,.7) ),
+   url('./images/p1.jpg');
+   background-size: cover;
 }
 
 code {
@@ -17,7 +19,7 @@ code {
 
 .expenses {
   padding: 1rem;
-  background-color: rgb(31, 31, 31);
+  background-color: white;
   margin: 2rem auto;
   width: 50rem;
   max-width: 95%;
@@ -43,7 +45,7 @@ code {
   padding: 0.5rem;
   margin: 1rem 0;
   border-radius: 12px;
-  background-color: #4b4b4b;
+  background-color: #653dc4;
 }
 
 /* .expense-description {
@@ -60,7 +62,7 @@ code {
   font-size: 1rem;
   font-weight: bold;
   color: white;
-  background-color: #40005d;
+  background-color: #28184e;
   border: 1px solid white;
   padding: 0.5rem;
   border-radius: 12px;
@@ -101,7 +103,7 @@ code {
   border-radius: 12px;
   padding: 0.5rem 1rem;
   text-align: center;
-  background-color: #2a2a2a;
+  background-color: #28184e;
 }
 
 .expense-month {
@@ -126,7 +128,7 @@ code {
 .new-expense-box {
   max-width: 50rem;
   width: 95%;
-  background-color: #a892ee;
+  background-color: white;
   border-radius: 12px;
   padding: 1rem;
   margin: 2rem auto;
@@ -134,14 +136,20 @@ code {
 }
 
 .new-expense-box button {
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.5rem;
   cursor: pointer;
-  background-color: #40005d;
-  color: white;
-  border-radius: 12px;
-  border: 1px solid #40005d;
+  background-color: white;
+  color: #653dc4;
+  border-radius: 8px;
+  border: 1px solid #653dc4;
   margin-right: 1rem;
   margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.new-expense-box button:hover {
+  background-color: #653dc4;
+  color: white;
 }
 .new-expense-form {
   display: flex;
@@ -152,15 +160,25 @@ code {
 .new-expense-box input {
   width: 23rem;
   max-width: 100%;
+  background-color: #05060f0a;
+  border-radius: .2rem;
+  color: #05060f99;
   padding: 0.5rem;
-  border-radius: 6px;
-  border: 1px solid white;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
 }
-
+.new-expense-box input:hover, .new-expense-box input:focus {
+  outline: none;
+  border-color: #05060f;
+}
 .new-expense-box label {
   display: block;
+  margin-bottom: .3rem;
+  font-size: .9rem;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  color: #05060f99;
+  transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
 }
 
 
@@ -229,7 +247,7 @@ code {
 .expenses-filter label {
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: white;
+  color: #05060f99;
   font-size: 1.2rem;
 }
 
@@ -238,4 +256,58 @@ code {
   padding: 0.5rem 3rem;
   font-weight: bold;
   border-radius: 6px;
+  border: 1px solid #653dc4;
+  color: #653dc4;
+}
+
+/* Stocks styling */
+
+.crypto-box {
+    max-width: 50rem;
+    width: 95%;
+    background-color: white;
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 2rem auto;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.stock-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 0.7rem;
+  padding: 0 1rem;
+  background: #05060f0a;
+  box-shadow:  5px 5px 10px #bebebe,
+             -5px -5px 10px #ffffff;
+}
+
+.stock-item > * {
+  font-size: .9rem;
+  font-weight: bold;
+  color: #653dc4;
+}
+
+.crypto {
+  background-color: #653dc4;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+  padding: 1rem;
+}
+
+.central {
+  text-align: center;
+  max-height: 10rem;
+  overflow:scroll;
+}
+
+.wrong {
+  font-size: 1.3rem;
+  color: #653dc4;
+  font-weight: 500;
 }

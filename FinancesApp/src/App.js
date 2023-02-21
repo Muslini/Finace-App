@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import Expenses from "./components/Expenses";
 import NewExpense from "./components/New";
-
+import Stocks from "./components/Stocks";
 
 
 
@@ -41,6 +41,7 @@ function App() {
 
   return (
     <div>
+      <Stocks />
       <NewExpense onTransferExpense={updateExpense} />
       <Expenses data={expenses} />
     </div>

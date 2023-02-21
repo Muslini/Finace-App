@@ -16,12 +16,14 @@ async function FetchPrices() {
 try{
     const response = await fetch("/api")
     const docu = await response.json();
-    console.log(docu)
+
+
     if(docu.length === {}) {
         throw new Error("Something went wrong!")
+        
     }
     const stockData = docu.data;
-    console.log(stockData);
+    
     const loadedData = [];
     for (const obj in stockData) {
         loadedData.push({
@@ -31,7 +33,7 @@ try{
             change: stockData[obj][0].quote.USD.percent_change_24h
         });
     };
-    console.log(loadedData);
+    
     setPrice(loadedData);
 } catch (error) {
     setError(error.message)
